@@ -29,3 +29,8 @@ jobs:
 
     - name: Build
       run: cmake --build --preset ${{ matrix.preset }} --parallel 4
+      
+    - uses: actions/upload-artifact@master
+      with:
+        name: build
+        path: build/nx/
