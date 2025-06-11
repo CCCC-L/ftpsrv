@@ -420,6 +420,10 @@ static int ftp_custom_cmd_TID(void* userdata, const char* data, char* msg_buf, u
                 tid = 0;
             }
 
+            result=accountGetPreselectedUser(&userid);
+            snprintf(msg_buf, msg_buf_len, "Failed: test() 0x%08X", userid);
+            snprintf(msg_buf, msg_buf_len, "Failed: test2() 0x%08X", result);
+
             if (!tid) {
                 snprintf(msg_buf, msg_buf_len, "Failed: pminfoInitialize() 0x%08X", rc);
             } else {
