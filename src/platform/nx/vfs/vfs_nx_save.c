@@ -241,7 +241,7 @@ end:
         fsFsDeleteFile(sdmc_fs, db.path_temp);
     } else {
         mz->fbuf_off = 0;
-        mz->time = time(NULL);
+        mz->time = 0;
     }
 
     return rc;
